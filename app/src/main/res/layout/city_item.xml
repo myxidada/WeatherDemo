@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="50dp">
+
+    <!--<TextView-->
+        <!--style="@style/city_info"-->
+        <!--android:id="@+id/city_id"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent" />-->
+    <!--<TextView-->
+        <!--android:visibility="gone"-->
+        <!--style="@style/city_info"-->
+        <!--android:id="@+id/city_province"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent" />-->
+    <TextView
+        android:text="csmingzi"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:id="@+id/city_name"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent" />
+</LinearLayout>

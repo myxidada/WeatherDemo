@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.feicui.weatherdemo.MainActivity"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <android.support.v7.widget.Toolbar
+            android:layout_weight="8"
+            android:background="@color/colorPrimary"
+            android:id="@+id/toolbar"
+            android:layout_width="0dp"
+            android:layout_height="60dp">
+        </android.support.v7.widget.Toolbar>
+        <TextView
+            android:id="@+id/main_title_tv"
+            android:background="@color/colorPrimary"
+            android:layout_weight="2"
+            android:text="城市列表"
+            android:textSize="15sp"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <!--<TextView-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:id="@+id/main_title_tv"-->
+        <!--android:focusable="true"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="30dp" />-->
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@color/colorPrimary"
+        android:layout_below="@id/toolbar"
+        android:id="@+id/main_title_linear"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <LinearLayout
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="90dp">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="星期几"
+                    android:textSize="30sp"
+                    android:id="@+id/week"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <!--<TextView-->
+                    <!--android:text="时间"-->
+                    <!--android:id="@+id/date_y"-->
+                    <!--style="@style/today_info"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_alignParentStart="true" />-->
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="今日温度"
+                    android:id="@+id/temperature"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/weather"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+
+                <TextView
+                    android:text="天气情况"
+                    android:id="@+id/weather"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="当前温度"
+                    android:id="@+id/temp"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:text="风度"
+                    android:id="@+id/wind"
+                    android:layout_below="@id/temp"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+            <TextView
+                android:visibility="gone"
+                android:text="今日热度"
+                android:background="@color/colorPrimary"
+                android:textSize="15sp"
+                android:id="@+id/dressing_index"
+                android:layout_weight="3.5"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:visibility="gone"
+                android:text="建议着装"
+                android:background="@color/colorPrimary"
+                style="@style/today_info"
+                android:id="@+id/dressing_advice"
+                android:layout_weight="7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </LinearLayout>
+<TextView
+    android:gravity="center"
+    android:text="未来七天天气情况"
+    android:layout_width="match_parent"
+    android:layout_height="30dp" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/main_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>
